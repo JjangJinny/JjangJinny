@@ -23,3 +23,4 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           curl -H "Content-Type: application/json" -d "{\"text\": \"🔔 채진's Pull Request Event: ${{ github.event.pull_request.title }} by ${{ github.event.pull_request.user.login }}. Action: ${{ github.event.action }}, URL: ${{ github.event.pull_request.html_url }}.\"}" ${{ secrets.M365_WEBHOOK_URL }}
+          
